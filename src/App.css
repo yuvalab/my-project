@@ -1,31 +1,36 @@
 .App {
   text-align: center;
-  z-index: 1;
   width: 100%;
   height: 100%;
   position: fixed;
   top:0;
   left: 0;
-  /* cursor: url(icons-arrow-pointing-left.png), pointer; */
 }
 
 .custom-cursor {
-  border: 1px solid black;
+  height: 100%;
 }
 
 .right {
-  border: 1px solid red;
   cursor: url(icons-arrow-right.png), pointer;
-  display: inline-block;
-  width: 495px;
-}
+  width:50%;
+  height:100%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
 
+}
 
 .left{
     cursor: url(icons-arrow-pointing-left.png), pointer;
-    border: 1px solid green;
-    display: inline-block;
-    width: 495px;
+    width:50%;
+    height:100%;
+    display: block;
+    position: absolute;
+    left:0;
+    opacity: 0;
+
 }
 
 .App-logo {
