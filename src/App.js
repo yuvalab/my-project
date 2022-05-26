@@ -6,9 +6,7 @@ import { CustomCursor } from './CustomCursor';
 function App() {
   return (
     <div className="App">
-      <CustomCursor>
-        <Gallery />
-       </CustomCursor>
+      <Gallery />
     </div>
   );
 }

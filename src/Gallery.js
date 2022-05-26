@@ -1,12 +1,13 @@
 import React from 'react';
+import { CustomCursor } from './CustomCursor';
 import view1 from './pics/view1.jpeg';
 import view2 from './pics/view2.jpeg';
 import view3 from './pics/view3.jpeg';
 import view4 from './pics/view4.jpeg';
 
 export default class Gallery extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             imgIndex: 0,
             images: [view1, view2, view3, view4],
@@ -44,9 +45,9 @@ export default class Gallery extends React.Component {
   render() {
     return (
         <div className='gallery'>
-            {/* {this.constructStyleCursor()} */}
+            <CustomCursor onClickNext={this.onClickNext} onClickPrevious={this.onClickPrevious}></CustomCursor>
             <button onClick={this.onClickPrevious}> Previous </button>
-            <img style={{width: '600px', height:'600px'}} src={this.state.images[this.state.imgIndex]}/>
+            <img alt={this.state.imgIndex} style={{width: '600px', height:'600px'}} src={this.state.images[this.state.imgIndex]}/>
             <button onClick={this.onClickNext}> Next </button>
       </div>
     );
