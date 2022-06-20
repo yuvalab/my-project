@@ -7,12 +7,13 @@
   left: 0;
 }
 
+
 .custom-cursor {
   height: 100%;
+  width: 100%;
 }
 
 .right {
-  cursor: url(icons-arrow-right.png), pointer;
   width:50%;
   height:100%;
   display: block;
@@ -23,14 +24,12 @@
 }
 
 .left{
-    cursor: url(icons-arrow-pointing-left.png), pointer;
     width:50%;
     height:100%;
     display: block;
     position: absolute;
     left:0;
     opacity: 0;
-
 }
 
 .App-logo {

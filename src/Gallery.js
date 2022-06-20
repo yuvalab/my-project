@@ -40,12 +40,20 @@ export default class Gallery extends React.Component {
         }
       }
 
+      getCurrentSizeWindow() {
+        let size= {};
+        const container = document.querySelector('.gallery');
+        size.width = container?.clientWidth;
+        size.height = container?.clientHeight;
+        return size;
+      }
+
 
     
   render() {
     return (
         <div className='gallery'>
-            <CustomCursor onClickNext={this.onClickNext} onClickPrevious={this.onClickPrevious}></CustomCursor>
+            <CustomCursor onClickNext={this.onClickNext} onClickPrevious={this.onClickPrevious} getCurrentSizeWindow={this.getCurrentSizeWindow()}></CustomCursor>
             <button onClick={this.onClickPrevious}> Previous </button>
             <img alt={this.state.imgIndex} style={{width: '600px', height:'600px'}} src={this.state.images[this.state.imgIndex]}/>
             <button onClick={this.onClickNext}> Next </button>

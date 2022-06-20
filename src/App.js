@@ -1,7 +1,5 @@
 import './App.css';
 import Gallery from './Gallery';
-import { CustomCursor } from './CustomCursor';
-
 
 function App() {
   return (
